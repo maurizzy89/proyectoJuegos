@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 50px;
+    background-color: rgb(190, 190, 190);
+}
+
+.navbar__link {
+    color: grey;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.navbar__right {
+    width: 50%;
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+}
+
+.navbar__menu-item {
+    font-size: 28px;
+    color: grey;
+    padding: 0 8px;
+}
+
+.active {
+    background-color: red !important;
+}
