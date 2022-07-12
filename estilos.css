@@ -8,33 +8,53 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 30px 50px;
-    background-color: rgb(190, 190, 190);
+    padding: 10px 10px;
+    background-color: black;
+    text-align: center;
 }
 
 .navbar__link {
-    color: grey;
-    font-size: 28px;
-    text-decoration: none;
+    width: 20%;
+    size: 38px;
+}
+
+.navbar__left {
+    text-align: left;
+    width: 50%;
+    height: 10%;
 }
 
 .navbar__right {
+    text-align: left;
     width: 50%;
 }
 
 .navbar__menu {
+    text-shadow:
+        0 0 5px grey,
+        0 0 15px grey,
+        0 0 30px grey,
+        0 0 50px grey,
+        0 0 75px grey,
+        0 0 100px grey;
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
     width: 100%;
     list-style: none;
 }
 
+a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
 .navbar__menu-item {
-    font-size: 28px;
-    color: grey;
-    padding: 0 8px;
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    padding: 40px 2px;
 }
 
 .active {
-    background-color: red !important;
+    background-color: rgb(21, 9, 53) !important;
 }
