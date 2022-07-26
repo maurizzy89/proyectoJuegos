@@ -9,7 +9,8 @@ body {
   background-repeat: no-repeat;
   background-position: top;
 }
- /* navBar */
+
+/* navBar */
 
 .navbar {
   display: flex;
@@ -107,8 +108,7 @@ a {
 /* footer */
 
 footer {
-    padding: 5px;
-
+  padding: 5px;
   width: 100%;
   background-color: rgb(21, 21, 22);
   color: antiquewhite;
@@ -116,7 +116,7 @@ footer {
   padding: px;
 }
 
- .box {
+.box {
   padding: 15px;
   width: 100%;
   height: 100%;
@@ -125,12 +125,9 @@ footer {
   align-items: center;
 }
 
-ul{
+ul {
   list-style: none;
 }
-
-
-
 
 .active {
   box-shadow: 1px 1px 10px;
