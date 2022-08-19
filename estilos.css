@@ -70,6 +70,11 @@ a {
   text-align: center;
   color: chocolate;
   box-sizing: 60px;
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=55270'), auto;
+}
+
+.container.what-player {
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=55273'), auto;
 }
 
 .game-container {
@@ -89,7 +94,8 @@ a {
   font-size: 250px;
   color: greenyellow;
   display: flex;
-  padding: 50px 25px;
+  min-height: 100%;
+  padding: 55px 25px 50px;
 }
 
 .game-restart {
