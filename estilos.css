@@ -36,18 +36,17 @@ body {
 .navbar__right {
   display: flex;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 
 .navbar__menu {
-  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke,
-    0 0 50px whitesmoke, 0 0 75px whitesmoke, 0 0 100px whitesmoke;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
   width: 100%;
   list-style: none;
   padding: 20px;
+  transition: all .5s;
 }
 
 a {
@@ -55,21 +54,34 @@ a {
   text-decoration: none;
 }
 
+.navbar__menu-item.current a {
+  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke,
+  0 0 50px whitesmoke, 0 0 75px whitesmoke, 0 0 100px whitesmoke;
+}
+
+.navbar__menu-item a:hover {
+  text-shadow: 0 0 5px whitesmoke, 0 0 15px whitesmoke, 0 0 30px whitesmoke,
+  0 0 50px whitesmoke, 0 0 75px whitesmoke, 0 0 100px whitesmoke;
+  transition: all .5s;
+}
+
 .navbar__menu-item {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 35px;
-  padding: 40px 10px;
+  padding: 20px 10px;
 }
 
 /* main */
 
 .container {
+  display: flex;
   text-shadow: 0 0 5px rgb(27, 2, 2), 0 0 15px black, 0 0 30px black;
   font-size: xx-large;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   color: chocolate;
   box-sizing: 60px;
+  padding: 0 155px;
   cursor: url('http://www.rw-designer.com/cursor-extern.php?id=55270'), auto;
 }
 
@@ -77,32 +89,91 @@ a {
   cursor: url('http://www.rw-designer.com/cursor-extern.php?id=55273'), auto;
 }
 
+.winning-modal {
+  position: fixed;
+  max-width: max-content;
+  max-height: max-content;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 40px 25px;
+  background-color: lightblue;
+  color: rgb(80, 80, 238);
+  transition: all .5s;
+  text-shadow: none;
+}
+
+.winning-modal p {
+  font-weight: 600;
+}
+
 .game-container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: 300px;
-  margin: 50px auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 800px;
+  max-height: 800px;
+  padding: 0 100px;
 }
 
 .cell {
   width: 200px;
   height: 200px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   line-height: 100px;
 }
 .XorO {
   font-size: 250px;
-  color: greenyellow;
+  color: #e5de23;
   display: flex;
   min-height: 100%;
   padding: 55px 25px 50px;
 }
 
+.cell:nth-of-type(1),
+.cell:nth-of-type(2),
+.cell:nth-of-type(4),
+.cell:nth-of-type(5) {
+  border-bottom: 3px solid #d2691e;
+  border-right: 3px solid #d2691e;
+}
+
+.cell:nth-of-type(3),
+.cell:nth-of-type(6) {
+  border-bottom: 3px solid #d2691e;
+}
+
+.cell:nth-of-type(7),
+.cell:nth-of-type(8) {
+  border-right: 3px solid #d2691e;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .game-restart {
-  background-color: transparent;
+  background-color:blue;
+  color: white;
   padding: 8px;
   border-radius: 10px;
   font-size: 20px;
+  transition: all .5s;
+}
+
+.game-restart:hover {
+  background-color: green;
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=55270'), auto;
+  transition: all .5s;
+}
+
+.what-player.game-restart:hover {
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=55273'), auto;
 }
 
 .game-notification {

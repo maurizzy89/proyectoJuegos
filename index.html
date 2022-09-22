@@ -19,7 +19,7 @@
         </div>
         <div class="navbar__right">
             <ul class="navbar__menu">
-                <li class="navbar__menu-item"><a href="#">TaTeTi</a></li>
+                <li class="navbar__menu-item current"><a href="#">TaTeTi</a></li>
                 <li class="navbar__menu-item"><a href="#">Ahorcado</a></li>
                 <li class="navbar__menu-item"><a href="#">Adivina el Número</a></li>
                 <li class="navbar__menu-item"><a href="#">Trivia 2022</a></li>
@@ -27,7 +27,7 @@
         </div>
     </nav>
     <div class="container">
-        <h2>TaTeTí</h2>
+        <div class="winning-modal"></div>
         <div class="game-container">
             <div class="cell">
                 <span class="XorO" symbol="" is-played="" last-player="none"></span>
@@ -57,10 +57,12 @@
                 <span class="XorO" symbol="" is-played="" last-player="none"></span>
             </div>
         </div>
-        <h4 class="game-notification">Turno del jugador: <i id="player-display" style="color:green"></i></h4>
-        <br>
-        <div style="text-align: center;">
-        <button class="game-restart">Reestablecer</button>
+        <div class="game-info">
+            <h2>TaTeTí</h2>
+            <div class="start-and-player">
+                <button class="game-restart" id="start">Iniciar</button>
+                <h4 class="game-notification">Turno del jugador: <i id="player-display" style="color:#e5de23"></i></h4>
+            </div>
         </div>
     </div>
     <br>
